@@ -98,7 +98,7 @@
         .language-selector a {
             margin-left: 10px;
             text-decoration: none;
-            color: var(--color-rojo);
+            color: var(--color-blanco);
             font-weight: bold;
             opacity: 0.7;
             transition: opacity 0.3s;
@@ -206,13 +206,16 @@
         .sobre-img {
             flex: 1;
             min-height: 400px;
-            background-color: var(--color-marron-claro);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .sobre-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         
         .sobre-content {
@@ -422,7 +425,7 @@
                     <li><a href="#proyecto">Proyecto</a></li>
                     <li><a href="#libros">Libros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre">Sobre nosotros</a></li>
+                    <li><a href="#sobre">Sobre mí</a></li>
                     <li><a href="#plataformas">Conectemos</a></li>
                 </ul>
                 <div class="language-selector">
@@ -440,8 +443,8 @@
             <p>Descubre el lenguaje silencioso de los caballos y transforma tu relación con estos magníficos seres</p>
             <div>
                 <a href="#servicios" class="btn">Explora mis servicios</a>
-                <a href="#libros" class="btn btn-secondary">Descubre los libros</a>
-                <a href="proyecto.html" class="btn btn-secondary">Nuestro Proyecto</a>
+                <a href="#libros" class="btn btn-secondary">Descubre mis libros</a>
+                <a href="proyecto.html" target="_blank" class="btn btn-secondary">Nuestro Proyecto</a>
             </div>
         </div>
     </section>
@@ -455,6 +458,7 @@
                 <p>El Proyecto Feralis nace de la necesidad de crear puentes de comunicación más profundos y auténticos entre humanos y caballos. A través de años de observación, estudio y convivencia con estos animales, he desarrollado metodologías que respetan la esencia y naturaleza del caballo.</p>
                 <p>Este proyecto se sustenta en tres pilares fundamentales: la educación mediante talleres y seminarios, la divulgación a través de publicaciones y contenido digital, y la creación de una comunidad de amantes de los caballos que comparten valores de respeto y comprensión mutua.</p>
                 <p>Tu apoyo económico permite mantener y expandir este proyecto, llegando a más personas y caballos que pueden beneficiarse de estas enseñanzas.</p>
+                <a href="proyecto.html" target="_blank" class="btn">Conocer más sobre el proyecto</a>
             </div>
         </div>
     </section>
@@ -465,17 +469,19 @@
             <h2 class="section-title">Sobre David Castro</h2>
             <div class="sobre-david">
                 <div class="sobre-img">
-                    <i class="fas fa-user"></i>
+                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/11/13/5fa44ef23be9e.jpeg" alt="David Castro con caballos">
                 </div>
                 <div class="sobre-content">
                     <h3>Escritor e investigador. Especialista en relación entre humanos y caballos.</h3>
-                    <p>Soy David Castro. Desde hace más de veinte años, he convivido, trabajado e investigado junto a caballos y otros animales cautivos dependientes.</p>
-                    <p> De la Doma a la Liberación – Una Vida con los Caballo
-Con más de dos décadas de trabajo al lado de los caballos, David Castro ha recorrido un camino de transformación profunda que lo llevó de ser un reconocido domador a un referente internacional en educación respetuosa y activismo por los derechos animales.
-Su trayectoria comenzó hace más de 20 años, donde durante una década se destacó como domador, siendo conocido por su facilidad y rapidez para obtener resultados excepcionales con técnicas no violentas. Sin embargo, su búsqueda de una relación más auténtica lo llevó a trascender el concepto de "doma" para abrazar uno de "educación".
-Este cambio de paradigma lo impulsó a fundar el Espacio con Caballos (2010) y, tras ser nombrado representante de la Nevzorov Haute Ecole en Argentina (2012), fundó la primera Escuela Argentina de Hipología (2013). Su influencia creció con la publicación de sus dos libros, "El silencio de los caballos" (2015) y "Y le susurré al caballo" (2018), y docenas de artículos que denuncian la explotación equina y promueven el respeto.
-Desde 2017, su trabajo se ha expandido más allá de los caballos con el "Proyecto Feralis", una iniciativa de investigación para la coexistencia entre humanos y todos los animales dependientes (vacas, cerdos, perros, gallinas, etc.), explorando la resalvajización y la vida en territorios compartidos con armonía.
-Durante más de doce años, David ha viajado de forma autogestionada por América y Europa, impartiendo charlas, talleres y apoyando santuarios. Su misión hoy es clara: educar para comprender, respetar y liberar, trabajando por un futuro donde la relación con los demás animales se base en el respeto y no en la explotación..</p>
+                    <p>De la Doma a la Liberación – Una Vida con los Caballos. Con más de dos décadas de trabajo al lado de los caballos, David Castro ha recorrido un camino de transformación profunda que lo llevó de ser un reconocido domador a un referente internacional en educación respetuosa y activismo por los derechos animales.</p>
+                    
+                    <p>Su trayectoria comenzó hace más de 20 años, donde durante una década se destacó como domador, siendo conocido por su facilidad y rapidez para obtener resultados excepcionales con técnicas no violentas. Sin embargo, su búsqueda de una relación más auténtica lo llevó a trascender el concepto de "doma" para abrazar uno de "educación".</p>
+                    
+                    <p>Este cambio de paradigma lo impulsó a fundar el Espacio con Caballos (2010) y, tras ser nombrado representante de la Nevzorov Haute Ecole en Argentina (2012), fundó la primera Escuela Argentina de Hipología (2013). Su influencia creció con la publicación de sus dos libros, "El silencio de los caballos" (2015) y "Y le susurré al caballo" (2018), y docenas de artículos que denuncian la explotación equina y promueven el respeto.</p>
+                    
+                    <p>Desde 2017, su trabajo se ha expandido más allá de los caballos con el "Proyecto Feralis", una iniciativa de investigación para la coexistencia entre humanos y todos los animales dependientes (vacas, cerdos, perros, gallinas, etc.), explorando la resalvajización y la vida en territorios compartidos con armonía.</p>
+                    
+                    <p>Durante más de doce años, David ha viajado de forma autogestionada por América y Europa, impartiendo charlas, talleres y apoyando santuarios. Su misión hoy es clara: educar para comprender, respetar y liberar, trabajando por un futuro donde la relación con los demás animales se base en el respeto y no en la explotación.</p>
                 </div>
             </div>
         </div>
@@ -498,7 +504,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                             <span class="bandera">EN</span>
                             <span class="bandera">PT</span>
                         </div>
-                        <a href="#" class="btn"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
+                        <a href="https://www.amazon.com/dp/B0B1JFMV8K" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
                     </div>
                 </div>
                 
@@ -508,12 +514,12 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <div class="libro-content">
                         <h3>Y le susurré al caballo</h3>
-                        <p>Relatos y experiencias personales que revelan los secretos de la conexión equina.</p>
+                        <p>Relatos y experiencias personalizadas que revelan los secretos de la conexión equina.</p>
                         <div class="banderas">
                             <span class="bandera">ES</span>
                             <span class="bandera">PT</span>
                         </div>
-                        <a href="#" class="btn"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
+                        <a href="https://www.amazon.com/dp/B07KX6YQZ1" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
                     </div>
                 </div>
             </div>
@@ -530,8 +536,8 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Talleres Presenciales</h3>
-                    <p>Experiencias prácticas donde aprenderás to communicate with horses in a natural and safe environment.</p>
-                    <a href="#" class="btn">Más información</a>
+                    <p>Experiencias prácticas donde aprenderás a comunicarte con caballos en un entorno natural y seguro.</p>
+                    <a href="https://calendly.com/davidcastro/consulta" class="btn" target="_blank">Más información</a>
                 </div>
                 
                 <div class="servicio-card">
@@ -540,7 +546,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Seminarios Online</h3>
                     <p>Formación especializada desde cualquier lugar del mundo con contenido exclusivo y seguimiento personalizado.</p>
-                    <a href="#" class="btn">Próximos eventos</a>
+                    <a href="https://academia.proyectoferalis.com" class="btn" target="_blank">Próximos eventos</a>
                 </div>
                 
                 <div class="servicio-card">
@@ -549,7 +555,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Asesoramiento Personalizado</h3>
                     <p>Sesiones individuales para resolver problemas específicos con tu caballo o profundizar en aspectos concretos.</p>
-                    <a href="#" class="btn">Solicitar asesoría</a>
+                    <a href="https://calendly.com/davidcastro/consulta" class="btn" target="_blank">Solicitar asesoría</a>
                 </div>
             </div>
         </div>
@@ -568,7 +574,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Patreon</h3>
                     <p>Apoyo mensual con recompensas exclusivas</p>
-                    <a href="#" class="btn">Unirse</a>
+                    <a href="https://www.patreon.com/proyectoferalis" class="btn" target="_blank">Unirse</a>
                 </div>
                 
                 <div class="plataforma-card">
@@ -577,7 +583,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Ko-fi</h3>
                     <p>Contribuciones puntuales para el proyecto</p>
-                    <a href="#" class="btn">Contribuir</a>
+                    <a href="https://ko-fi.com/proyectoferalis" class="btn" target="_blank">Contribuir</a>
                 </div>
                 
                 <div class="plataforma-card">
@@ -586,7 +592,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Instagram</h3>
                     <p>Contenido diario y behind the scenes</p>
-                    <a href="#" class="btn">Seguir</a>
+                    <a href="https://www.instagram.com/proyecto.feralis/" class="btn" target="_blank">Seguir</a>
                 </div>
                 
                 <div class="plataforma-card">
@@ -595,7 +601,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>YouTube</h3>
                     <p>Tutoriales y documentales gratuitos</p>
-                    <a href="#" class="btn">Suscribirse</a>
+                    <a href="https://www.youtube.com/c/ProyectoFeralis" class="btn" target="_blank">Suscribirse</a>
                 </div>
                 
                 <div class="plataforma-card">
@@ -604,7 +610,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Linktree</h3>
                     <p>Acceso a todos mis enlaces</p>
-                    <a href="#" class="btn">Visitar</a>
+                    <a href="https://linktr.ee/feralis" class="btn" target="_blank">Visitar</a>
                 </div>
                 
                 <div class="plataforma-card">
@@ -613,7 +619,7 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
                     </div>
                     <h3>Blog</h3>
                     <p>Artículos profundos sobre comunicación equina</p>
-                    <a href="#" class="btn">Leer</a>
+                    <a href="https://medium.com/@proyectoferalis" class="btn" target="_blank">Leer</a>
                 </div>
             </div>
         </div>
@@ -626,11 +632,11 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
             <p>Conectando humanos y caballos a través del respeto y la comprensión mutua</p>
             
             <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-amazon"></i></a>
+                <a href="https://www.instagram.com/proyecto.feralis/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/ProyectoFeralis" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/proyecto.feralis/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@proyectoferalis" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.amazon.com/David-Castro/e/B07KX6YQZ1" target="_blank"><i class="fab fa-amazon"></i></a>
             </div>
             
             <p>Contacto: davidnhe@gmail.com</p>
@@ -638,5 +644,4 @@ Durante más de doce años, David ha viajado de forma autogestionada por Améric
         </div>
     </footer>
 </body>
-
 </html>
