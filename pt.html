@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Feralis - Comunicação Equina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-tierra: #8C6A4F;
+            --color-verde-oscuro: #2A4D34;
+            --color-verde-medio: #547A5A;
+            --color-arena: #D7C9AA;
+            --color-marron-claro: #B5927E;
+            --color-blanco: #F8F5F0;
+            --color-texto: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-blanco);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c6a4f' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header y Navegación */
+        header {
+            background: var(--color-verde-oscuro);
+            color: var(--color-blanco);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--color-blanco);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-blanco);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-arena);
+        }
+        
+        /* Selector de idiomas */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .language-selector a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: var(--color-blanco);
+            font-weight: bold;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .language-selector a.active {
+            opacity: 1;
+            border-bottom: 2px solid var(--color-arena);
+        }
+        
+        .language-selector a:hover {
+            opacity: 1;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--color-blanco);
+            margin-bottom: 60px;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 77, 52, 0.8) 0%, rgba(84, 122, 90, 0.8) 100%), 
+                        url('https://cdn.mos.cms.futurecdn.net/Nk4TdwHqFDKXZQwkvaiyEC-1920-80.jpg.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background: var(--color-tierra);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--color-blanco);
+        }
+        
+        /* Secciones generales */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--color-verde-oscuro);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--color-tierra);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        /* Proyecto Feralis */
+        .proyecto-feralis {
+            background-color: var(--color-arena);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Sobre David */
+        .sobre-david {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .sobre-img {
+            flex: 1;
+            min-height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sobre-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        .sobre-content {
+            flex: 1;
+        }
+        
+        /* Libros */
+        .libros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .libro-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .libro-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .libro-img {
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+
+        .libro-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .libro-card:hover .libro-img img {
+            transform: scale(1.05);
+        }
+        
+        .libro-content {
+            padding: 20px;
+        }
+        
+        .libro-content h3 {
+            margin-bottom: 10px;
+            color: var(--color-verde-oscuro);
+        }
+        
+        .banderas {
+            margin: 10px 0;
+        }
+        
+        .bandera {
+            display: inline-block;
+            padding: 3px 8px;
+            background: var(--color-verde-medio);
+            color: white;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        
+        .bandera.coming-soon {
+            background: #888;
+        }
+        
+        /* Servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .servicio-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .servicio-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .servicio-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--color-tierra);
+        }
+        
+        /* Plataformas */
+        .plataformas {
+            background-color: var(--color-verde-medio);
+            color: white;
+            border-radius: 20px;
+            padding: 60px 0;
+        }
+        
+        .plataformas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .plataforma-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .plataforma-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .plataforma-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Sitios Amigos */
+        .sitios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .sitio-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 25px;
+        }
+        
+        .sitio-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sitio-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--color-verde-medio);
+        }
+        
+        .sitio-img {
+            height: 180px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .sitio-img img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: var(--color-verde-oscuro);
+            color: white;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .social-links {
+            margin: 30px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            border-radius: 50%;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--color-tierra);
+            transform: translateY(-5px);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .language-selector {
+                margin-left: 0;
+                margin-top: 15px;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .proyecto-feralis {
+                padding: 30px;
+            }
+            
+            .sobre-david {
+                flex-direction: column;
+            }
+            
+            .sobre-img {
+                width: 100%;
+                min-height: 300px;
+            }
+            
+            .sitios-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="pt.html" class="logo"><i class="fas fa-horse-head"></i> Projeto Feralis</a>
+                <ul class="nav-links">
+                    <li><a href="#proyecto">Projeto</a></li>
+                    <li><a href="#libros">Livros</a></li>
+                    <li><a href="#servicios">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#plataformas">Conectar</a></li>
+                    <li><a href="#sitios-amigos">Sitios Amigos</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="index.html">ES</a>
+                    <a href="en.html">EN</a>
+                    <a href="pt.html" class="active">PT</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Comunicação e Conexão Equina</h1>
+            <p>Descubra a linguagem silenciosa dos cavalos e transforme seu relacionamento com esses seres magníficos</p>
+            <div>
+                <a href="#servicios" class="btn">Explorar Serviços</a>
+                <a href="#libros" class="btn btn-secondary">Descobrir Livros</a>
+                <a href="projeto-pt.html" target="_blank" class="btn btn-secondary">Nosso Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyecto Feralis -->
+    <section id="proyecto">
+        <div class="container">
+            <h2 class="section-title">Projeto Feralis</h2>
+            <div class="proyecto-feralis">
+                <h3>O Coração do Meu Trabalho</h3>
+                <p>O Projeto Feralis nasceu da necessidade de criar pontes de comunicação mais profundas e autênticas entre humanos e cavalos. Através de anos de observação, estudo e convivência com esses animais, desenvolvi metodologias que respeitam a essência e a natureza do cavalo.</p>
+                <p>Este projeto é baseado em três pilares fundamentais: educação através de workshops and seminários, divulgação através de publicações e conteúdo digital, e a criação de uma comunidade de amantes de cavalos que compartilham valores de respeito e compreensão mútua.</p>
+                <p>Seu apoio econômico nos permite manter e expandir este projeto, alcançando mais pessoas and cavalos que podem se beneficiar desses ensinamentos.</p>
+                <a href="projeto-pt.html" target="_blank" class="btn">Saiba Mais Sobre o Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre David -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre David Castro</h2>
+            <div class="sobre-david">
+                <div class="sobre-img">
+                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/11/13/5fa44ef23be9e.jpeg" alt="David Castro com cavalos">
+                </div>
+                <div class="sobre-content">
+                    <h3>Escritor e Pesquisador. Especialista em Relações Humano-Cavalo.</h3>
+                    <p>Do Adestramento à Libertação - Uma Vida com Cavalos. Com mais de duas décadas de trabalho ao lado de cavalos, David Castro percorreu um caminho de profunda transformação que o levou de ser um renomado treinador de cavalos to uma referência internacional em educação respeitosa e ativismo pelos direitos dos animais.</p>
+                    
+                    <p>Sua jornada começou há mais de 20 anos, onde por uma década se destacou como treinador, conhecido por sua capacidade e velocidade em obter resultados excepcionais com técnicas não violentas. No entanto, sua busca por um relacionamento mais autêntico o levou a transcender o conceito de "treinamento" para abraçar o de "educação".</p>
+                    
+                    <p>Essa mudança de paradigma o levou a fundar o Espaço com Cavalos (2010) e, após ser nomeado representante da Nevzorov Haute Ecole na Argentina (2012), fundou a primeira Escola Argentina de Hipologia (2013). Sua influência cresceu com a publicação de seus dois livros, "O Silêncio dos Cavalos" (2015) e "E Sussurrei ao Cavalo" (2018), e dezenas de artigos que denunciam a exploração equina e promovem o respeito.</p>
+                    
+                    <p>Desde 2017, seu trabalho se expandiu além dos cavalos com o "Projeto Feralis", uma iniciativa de pesquisa para a coexistência entre humanos e todos os animais dependentes (vacas, porcos, cães, galinhas, etc.), explorando o rewilding e a vida em territórios compartilhados com harmonia.</p>
+                    
+                    <p>Por mais de doze anos, David has viajado de forma autogerida pela América e Europa, dando palestras, workshops e apoiando santuários. Sua missão hoje é clara: educar para entender, respeitar e libertar, trabalhando por um futuro onde a relação com outros animais seja baseda no respeito e não na exploração.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Libros -->
+    <section id="libros">
+        <div class="container">
+            <h2 class="section-title">Meus Livros</h2>
+            <div class="libros-grid">
+                <!-- LIVRO 1 - O SILÊNCIO DOS CAVALOS -->
+                <div class="libro-card">
+                    <div class="libro-img">
+                        <img src="https://m.media-amazon.com/images/I/81wtjWmkAgL._SL1417_.jpg" alt="Capa do livro O Silêncio dos Cavalos">
+                    </div>
+                    <div class="libro-content">
+                        <h3>O Silêncio dos Cavalos</h3>
+                        <p>Uma exploração profunda da comunicação não verbal entre humanos e cavalos.</p>
+                        <div class="banderas">
+                            <span class="bandera">PT</span>
+                            <span class="bandera">ES</span>
+                            <span class="bandera">EN</span>
+                        </div>
+                        <a href="https://www.amazon.com/-/es/Sil%C3%AAncio-dos-Cavalos-Portuguese/dp/B0DKXBRVWW" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar na Amazon</a>
+                    </div>
+                </div>
+                
+                <!-- LIVRO 2 - E SUSSURREI AO CAVALO -->
+                <div class="libro-card">
+                    <div class="libro-img">
+                        <img src="https://m.media-amazon.com/images/I/71vEnsrjRWL._SL1436_.jpg" alt="Capa do livro E Sussurrei ao Cavalo">
+                    </div>
+                    <div class="libro-content">
+                        <h3>E Sussurrei ao Cavalo</h3>
+                        <p>Histórias e experiências personalizadas que revelam os segredos da conexão equina.</p>
+                        <div class="banderas">
+                            <span class="bandera">PT</span>
+                            <span class="bandera">ES</span>
+                            <span class="bandera coming-soon">EN (Em Breve)</span>
+                        </div>
+                        <p><small>Nota: Atualmente disponível apenas em português e espanhol. Tradução para inglês em breve.</small></p>
+                        <a href="https://www.amazon.com/-/es/sussurrei-ao-cavalo-Portuguese/dp/B0CPFXR7YY" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar na Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Workshops Presenciais</h3>
+                    <p>Experiências práticas onde você aprenderá a se comunicar com cavalos em um ambiente natural e seguro.</p>
+                    <a href="https://calendly.com/davidcastro/consulta" class="btn" target="_blank">Mais Informações</a>
+                </div>
+                
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Seminários Online</h3>
+                    <p>Treinamento especializado de qualquer lugar do mundo com conteúdo exclusivo e acompanhamento personalizado.</p>
+                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Próximos Eventos</a>
+                </div>
+                
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Consultoria Personalizada</h3>
+                    <p>Sessões individuais para resolver problemas específicos com seu cavalo ou aprofundar aspectos específicos.</p>
+                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Solicitar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas -->
+    <section id="plataformas" class="plataformas">
+        <div class="container">
+            <h2 class="section-title">Conecte-se Conosco</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">Junte-se à comunidade, siga meu trabalho ou apoie o projeto</p>
+            
+            <div class="plataformas-grid">
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fab fa-patreon"></i>
+                    </div>
+                    <h3>Patreon</h3>
+                    <p>Apoio mensal com recompensas exclusivas</p>
+                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Junte-se Agora</a>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Ko-fi</h3>
+                    <p>Contribuições únicas para o projeto</p>
+                    <a href="https://ko-fi.com/proyectoferalis" class="btn" target="_blank">Apoie-nos</a>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Conteúdo diário e bastidores</p>
+                    <a href="https://www.instagram.com/osilenciodoscavalos/" class="btn" target="_blank">Seguir</a>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Tutoriais gratuitos e documentários</p>
+                    <a href="https://www.youtube.com/@DavidCastro-animalidad" class="btn" target="_blank">Inscrever-se</a>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Linktree</h3>
+                    <p>Acesso a todos os meus links</p>
+                    <a href="https://linktr.ee/feralis" class="btn" target="_blank">Visitar</a>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Blog</h3>
+                    <p>Artigos aprofundados sobre comunicação equina</p>
+                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Ler</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sitios Amigos -->
+    <section id="sitios-amigos" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h2 class="section-title">Sitios Amigos</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Descubre outros projetos e recursos recomendados sobre o mundo equino</p>
+            
+            <div class="sitios-grid">
+                <!-- Instagram Canal Equestre -->
+                <div class="sitio-card">
+                    <div class="sitio-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Canal Equestre</h3>
+                    <p>Conteúdo especializado sobre o mundo equestre no Instagram</p>
+                    <a href="https://www.instagram.com/canal_equestre/" class="btn" target="_blank">Seguir no Instagram</a>
+                </div>
+                
+                <!-- Podcast Spotify -->
+                <div class="sitio-card">
+                    <div class="sitio-icon">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <h3>Podcast Equestre</h3>
+                    <p>Podcast com conversas profundas sobre cavalos e bem-estar animal</p>
+                    <a href="https://open.spotify.com/show/59cWbU6KBVBk9fHoIU6PVY" class="btn" target="_blank">Ouvir no Spotify</a>
+                </div>
+                
+                <!-- Livro 1 -->
+                <div class="sitio-card">
+                    <div class="sitio-img">
+                        <img src="https://m.media-amazon.com/images/I/71l05H-bOTL._SL1500_.jpg" alt="Cavalos de Troia">
+                    </div>
+                    <h3>Cavalos de Troia</h3>
+                    <p>Os segredos por trás da Indústria Equestre revelados</p>
+                    <a href="https://www.amazon.com.br/Cavalos-Troia-segredos-Ind%C3%BAstria-Equestre-ebook/dp/B0CJRTLWYM" class="btn" target="_blank" style="font-size: 0.9rem;">
+                        Ver na Amazon
+                    </a>
+                </div>
+                
+                <!-- Livro 2 -->
+                <div class="sitio-card">
+                    <div class="sitio-img">
+                        <img src="https://m.media-amazon.com/images/I/812X0M7GcOL._SL1500_.jpg" alt="Outro livro recomendado">
+                    </div>
+                    <h3>Literatura Equestre</h3>
+                    <p>Mais recomendações de livros sobre o mundo equestre</p>
+                    <a href="https://a.co/d/cOp0i03" class="btn" target="_blank" style="font-size: 0.9rem;">
+                        Ver na Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Projeto Feralis - Comunicação Equina</h3>
+            <p>Conectando humanos e cavalos através do respeito e compreensão mútua</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/osilenciodoscavalos/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@DavidCastro-animalidad" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.patreon.com/cw/aprendizajeliberado" target="_blank"><i class="fab fa-patreon"></i></a>
+            </div>
+            
+            <p>Contato: davidnhe@gmail.com</p>
+            <p>&copy; 2023 Projeto Feralis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
