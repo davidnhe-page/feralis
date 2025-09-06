@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Feralis - Um Novo Paradigma de Convivência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-tierra: #8C6A4F;
+            --color-verde-oscuro: #2A4D34;
+            --color-verde-medio: #547A5A;
+            --color-arena: #D7C9AA;
+            --color-marron-claro: #B5927E;
+            --color-blanco: #F8F5F0;
+            --color-texto: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-blanco);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c6a4f' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header y Navegación */
+        header {
+            background: var(--color-verde-oscuro);
+            color: var(--color-blanco);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--color-blanco);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-blanco);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-arena);
+        }
+        
+        /* Selector de idiomas */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .language-selector a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: var(--color-blanco);
+            font-weight: bold;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .language-selector a.active {
+            opacity: 1;
+            border-bottom: 2px solid var(--color-arena);
+        }
+        
+        .language-selector a:hover {
+            opacity: 1;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+            color: var(--color-blanco);
+            margin-bottom: 60px;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 77, 52, 0.8) 0%, rgba(84, 122, 90, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1551122106-51d4e2f6f85f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background: var(--color-tierra);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--color-blanco);
+        }
+        
+        /* Secciones generales */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--color-verde-oscuro);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--color-tierra);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        /* Proyecto Feralis */
+        .proyecto-feralis {
+            background-color: var(--color-arena);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Modelo */
+        .modelo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .modelo-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .modelo-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .modelo-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--color-tierra);
+        }
+        
+        /* Fases */
+        .fases-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        
+        .fases-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-tierra);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .fase-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .fase-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--color-tierra);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -13px;
+        }
+        
+        .right::after {
+            left: -13px;
+        }
+        
+        .fase-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fase-number {
+            position: absolute;
+            top: -15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-tierra);
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--color-tierra);
+        }
+        
+        .left .fase-number {
+            right: -20px;
+        }
+        
+        .right .fase-number {
+            left: -20px;
+        }
+        
+        /* Por qué urgente */
+        .urgente-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .urgente-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            padding: 30px;
+            text-align: center;
+            border-top: 5px solid var(--color-verde-medio);
+        }
+        
+        .urgente-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .urgente-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--color-verde-medio);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: var(--color-verde-oscuro);
+            color: white;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .social-links {
+            margin: 30px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            border-radius: 50%;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--color-tierra);
+            transform: translateY(-5px);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .language-selector {
+                margin-left: 0;
+                margin-top: 15px;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .proyecto-feralis {
+                padding: 30px;
+            }
+            
+            .fases-timeline::after {
+                left: 31px;
+            }
+            
+            .fase-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .fase-container::after {
+                left: 15px;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .left .fase-number, .right .fase-number {
+                left: -20px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="pt.html" class="logo"><i class="fas fa-horse-head"></i> Projeto Feralis</a>
+                <ul class="nav-links">
+                    <li><a href="pt.html#proyecto">Projeto</a></li>
+                    <li><a href="pt.html#libros">Livros</a></li>
+                    <li><a href="pt.html#servicios">Serviços</a></li>
+                    <li><a href="pt.html#sobre">Sobre Mim</a></li>
+                    <li><a href="pt.html#plataformas">Conectar</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="proyecto.html">ES</a>
+                    <a href="proyecto-en.html">EN</a>
+                    <a href="projeto-pt.html" class="active">PT</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Projeto Feralis</h1>
+            <p>Um Novo Paradigma de Convivência Entre Humanos, Animais e Natureza</p>
+            <div>
+                <a href="#vision" class="btn">Descubra Nossa Visão</a>
+                <a href="#support" class="btn btn-secondary">Apoie o Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Não é um Santuário Tradicional</h2>
+            <div class="proyecto-feralis">
+                <p>Feralis é um espaço radical que integra refúgio, restauração ecológica e educação. Um lugar onde:</p>
+                <ul style="list-style-type: none; margin: 20px 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-leaf" style="color: var(--color-verde-medio); margin-right: 10px;"></i> Os animais vivem com dignidade em ambientes restaurados,</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-seedling" style="color: var(--color-verde-medio); margin-right: 10px;"></i> Novas formas de convivência são pesquisadas,</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-graduation-cap" style="color: var(--color-verde-medio); margin-right: 10px;"></i> Treinamento prático é oferecido para cuidadores e resgatistas.</li>
+                </ul>
+                <p>Feralis nasceu de uma convicção: precisamos de espaços que incorporem outra forma de habitar o mundo—onde os animais não são "recursos", mas seres com linguagem, vínculos e direitos. Onde restaurar a terra também significa curar nossos relacionamentos.</p>
+                <p>Em um mundo empenhado na divisão, Feralis se esforça para provar que outra sensibilidade é possível. Embora o caminho seja longo, cada workshop, artigo, livro e conversa planta sementes de mudança.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelo -->
+    <section style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Um Modelo de Restauração</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">O Projeto Feralis é uma iniciativa holística que combina três dimensões interconectadas:</p>
+            
+            <div class="modelo-grid">
+                <div class="modelo-card">
+                    <div class="modelo-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Resgate & Cuidado</h3>
+                    <p>Fornecendo refúgio para cavalos e animais dependentes com habitats adequados às espécies e práticas de cuidado respeitosas.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div class="modelo-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Regeneração Ecológica</h3>
+                    <p>Restaurando terras degradadas através de silvicultura regenerativa, recuperação do solo e práticas de plantio nativo.</p>
+                </div>
+                
+                <div class="modelo-card">
+                    <div class="modelo-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Educação & Treinamento</h3>
+                    <p>Oferecendo treinamento ético e técnico para defensores do bem-estar animal, resgatistas e trabalhadores de santuários.</p>
+                </div>
+            </div>
+            
+            <div class="proyecto-feralis" style="margin-top: 40px;">
+                <p>Feralis aborda três crises interconectadas:</p>
+                <ul style="list-style-type: none; margin: 20px 0;">
+                    <li style="margin-bottom: 15px;"><strong>Ecológica:</strong> Restaurando ecossistemas através de silvicultura regenerativa, recuperação do solo e plantio nativo.</li>
+                    <li style="margin-bottom: 15px;"><strong>Educacional:</strong> Oferecendo treinamento gratuito e acessível para trabalhadores de santuários, enfatizando respeito e observação.</li>
+                    <li style="margin-bottom: 15px;"><strong>Bem-estar Animal:</strong> Fornecendo refúgio para animais explorados/abandonados de forma consciente e organizada.</li>
+                </ul>
+                <p>Feralis é um espaço vivo onde humanos e animais curam, aprendem e transformam seus relacionamentos com a vida não humana e a própria Terra. Além de um santuário físico, é um projeto educacional, ecológico e cultural que semeia novos paradigmas de coexistência.</p>
+                <p>Em seu centro está o programa de Estudos de Cavalos e Animais Dependentes, oferecendo cursos online e presenciais fundamentados na ética e no respeito.</p>
+                <p>Feralis é mais que um lugar—é um modelo replicável de restauração, educação e cuidado profundo, onde cada ser (animal, planta, humano) pode prosperar com dignidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fases -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Fases do Projeto</h2>
+            
+            <div class="fases-timeline">
+                <div class="fase-container left">
+                    <div class="fase-content">
+                        <div class="fase-number">1</div>
+                        <h3>Pesquisa & Planejamento</h3>
+                        <p>Design do santuário, estratégias regenerativas, desenvolvimento curricular e estabelecimento de parcerias com instituições acadêmicas e organizações ecológicas.</p>
+                    </div>
+                </div>
+                
+                <div class="fase-container right">
+                    <div class="fase-content">
+                        <div class="fase-number">2</div>
+                        <h3>Aquisição de Terreno</h3>
+                        <p>Garantindo terreno que atenda aos critérios ambientais e logísticos—tamanho adequado, fontes de água, potencial de biodiversidade e acessibilidade para atividades educacionais.</p>
+                    </div>
+                </div>
+                
+                <div class="fase-container left">
+                    <div class="fase-content">
+                        <div class="fase-number">3</div>
+                        <h3>Criação do Santuário & Restauração Ecológica</h3>
+                        <ul>
+                            <li>Construção de abrigos e espaços de pastagem</li>
+                            <li>Início do plantio de espécies nativas e recuperação do solo</li>
+                            <li>Recepção de animais resgatados</li>
+                            <li>Cavalos como agentes ecológicos: Inspirado na reintrodução do cavalo de Przewalski, os cavalos Feralis auxiliarão na restauração através de pastoreio rotativo, dispersão de sementes e criação de trilhas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="fase-container right">
+                    <div class="fase-content">
+                        <div class="fase-number">4</div>
+                        <h3>Colaboração & Monitoramento</h3>
+                        <ul>
+                            <li>Parcerias internacionais com universidades/santuários</li>
+                            <li>Alianças governamentais para apoio político</li>
+                            <li>Avaliações de impacto para refinar práticas</li>
+                            <li>Documentação de mudanças ecológicas e comportamentais</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="fase-container left">
+                    <div class="fase-content">
+                        <div class="fase-number">5</div>
+                        <h3>Expansão</h3>
+                        <p>Dimensionando o santuário e a escola com base nas lições aprendidas, desenvolvendo projetos satélites e criando uma rede de centros inspirados no Feralis globalmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visión -->
+    <section id="vision" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Visão & Objetivos</h2>
+            
+            <div class="proyecto-feralis">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--color-verde-oscuro);">Visão</h3>
+                <p style="text-align: center; font-style: italic; font-size: 1.2rem;">Um modelo global de coexistência respeitosa, onde cavalos e animais dependentes vivem com dignidade enquanto regeneram ativamente os ecossistemas.</p>
+                
+                <h3 style="text-align: center; margin: 50px 0 30px; color: var(--color-verde-oscuro);">Objetivos</h3>
+                <ul style="list-style-type: none;">
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Garantir o bem-estar animal através de habitats seguros e adequados às espécies
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Restaurar ecossistemas degradados através de práticas regenerativas
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Treinar cuidadores através de programas gratuitos e baseados em ciência
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Avançar na pesquisa sobre impactos ecológicos e de bem-estar animal
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Construir redes internacionais para amplificar o modelo
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check-circle" style="color: var(--color-verde-medio); position: absolute; left: 0; top: 5px;"></i>
+                        Promover relações éticas entre humanos e não humanos
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgencia -->
+    <section id="support">
+        <div class="container">
+            <h2 class="section-title">Por Que Este Projeto é Urgente</h2>
+            
+            <div class="urgente-grid">
+                <div class="urgente-card">
+                    <div class="urgente-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Bem-estar Animal</h3>
+                    <p>Oferece refúgio para animais explorados, livres de abuso, onde podem viver de acordo com sua natureza e formar vínculos autênticos com humanos baseados no respeito e não no uso.</p>
+                </div>
+                
+                <div class="urgente-card">
+                    <div class="urgente-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Cura Ecológica</h3>
+                    <p>Combate a perda de biodiversidade através de práticas regenerativas, criando corredores para a vida selvagem e demonstrando soluções práticas para a degradação ambiental.</p>
+                </div>
+                
+                <div class="urgente-card">
+                    <div class="urgente-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educação</h3>
+                    <p>Capacita cuidadores globais com ferramentas respeitosas e baseadas em evidências, criando uma rede de profissionais treinados que podem implementar práticas éticas de cuidado animal em todo o mundo.</p>
+                </div>
+            </div>
+            
+            <div class="proyecto-feralis" style="margin-top: 40px;">
+                <p>Em um mundo que enfrenta o colapso climático, Feralis propõe uma alternativa tangível—uma que desacelera a degradação ambiental e promove harmonia com a natureza. Este não é apenas um esforço local, mas parte de um movimento global por um futuro sustentável.</p>
+                <p style="text-align: center; margin-top: 30px;">
+                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Apoie o Feralis no Patreon</a>
+                    <a href="https://ko-fi.com/proyectoferalis" class="btn btn-secondary" target="_blank">Faça uma Doação</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Projeto Feralis - Um Novo Paradigma de Convivência</h3>
+            <p>Onde humanos, animais e natureza se curam e prosperam juntos</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/osilenciodoscavalos/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@DavidCastro-animalidad" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.patreon.com/cw/aprendizajeliberado" target="_blank"><i class="fab fa-patreon"></i></a>
+                <a href="https://linktr.ee/feralis" target="_blank"><i class="fas fa-link"></i></a>
+            </div>
+            
+            <p>Contato: davidnhe@gmail.com</p>
+            <p>&copy; 2023 Projeto Feralis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
