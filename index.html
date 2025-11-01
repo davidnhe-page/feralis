@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- METADATOS ESENCIALES PARA SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Feralis - Comunicación Equina</title>
+    
+    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE -->
+    <meta name="google-site-verification" content="BtBCmnYp-P8ykVe9IdNeJQ3RsE8htrFE38HwoHofNK0" />
+    
+    <!-- TÍTULO OPTIMIZADO -->
+    <title>Proyecto Feralis - Comunicación Equina | David Castro | Libros y Talleres</title>
+    
+    <!-- DESCRIPCIÓN META - CRÍTICA PARA SEO -->
+    <meta name="description" content="David Castro: Especialista en comunicación equina y autor de 'El Silencio de los Caballos'. Talleres presenciales, seminarios online y metodologías respetuosas de conexión con caballos. Proyecto Feralis.">
+    
+    <!-- OPEN GRAPH PARA REDES SOCIALES -->
+    <meta property="og:title" content="Proyecto Feralis - Comunicación y Conexión Equina | David Castro">
+    <meta property="og:description" content="Descubre el lenguaje silencioso de los caballos. Talleres, libros y metodologías respetuosas de comunicación equina.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://proyectoferalis.org">
+    
+    <!-- SCHEMA MARKUP PARA BUSCADORES -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "name": "David Castro",
+                "description": "Escritor, investigador y especialista en comunicación equina con más de 20 años de experiencia",
+                "url": "https://proyectoferalis.org",
+                "sameAs": [
+                    "https://www.instagram.com/mas_animalidad/",
+                    "https://www.youtube.com/@DavidCastro-animalidad",
+                    "https://www.amazon.com/stores/author/B086QS9LBX"
+                ]
+            },
+            {
+                "@type": "Book",
+                "name": "El Silencio de los Caballos",
+                "author": {"@type": "Person", "name": "David Castro"},
+                "inLanguage": ["es", "en", "pt"]
+            },
+            {
+                "@type": "Book", 
+                "name": "Y le susurré al caballo",
+                "author": {"@type": "Person", "name": "David Castro"},
+                "inLanguage": ["es", "pt"]
+            },
+            {
+                "@type": "WebSite",
+                "name": "Proyecto Feralis",
+                "url": "https://proyectoferalis.org",
+                "description": "Comunicación y conexión equina - Talleres, libros y metodologías respetuosas"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -11,7 +66,6 @@
             --color-verde-oscuro: #2A4D34;
             --color-verde-medio: #547A5A;
             --color-arena: #D7C9AA;
-            --color-marron-claro: #B5927E;
             --color-blanco: #F8F5F0;
             --color-texto: #333333;
         }
@@ -27,7 +81,6 @@
             line-height: 1.6;
             color: var(--color-texto);
             background-color: var(--color-blanco);
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c6a4f' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
         .container {
@@ -37,7 +90,7 @@
             padding: 0 20px;
         }
         
-        /* Header y Navegación */
+        /* HEADER */
         header {
             background: var(--color-verde-oscuro);
             color: var(--color-blanco);
@@ -65,17 +118,19 @@
         }
         
         .logo i {
-            margin-right: 10px;
-            font-size: 1.5em;
+            margin-right: 15px;
+            font-size: 1.8em;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
+            flex: 1;
+            justify-content: center;
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin: 0 20px;
         }
         
         .nav-links a {
@@ -83,77 +138,114 @@
             color: var(--color-blanco);
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1.1rem;
         }
         
         .nav-links a:hover {
             color: var(--color-arena);
         }
         
-        /* Selector de idiomas */
+        /* LANGUAGE SELECTOR - MEJORADO Y FUNCIONAL */
         .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            margin-left: 20px;
-        }
-        
-        .language-selector a {
-            margin-left: 10px;
-            text-decoration: none;
-            color: var(--color-blanco);
             font-weight: bold;
-            opacity: 0.7;
-            transition: opacity 0.3s;
+            transition: all 0.3s ease;
+            font-size: 1rem;
         }
         
-        .language-selector a.active {
-            opacity: 1;
-            border-bottom: 2px solid var(--color-arena);
+        .language-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
         
-        .language-selector a:hover {
-            opacity: 1;
+        .language-button i {
+            margin-right: 8px;
+            font-size: 1.1rem;
         }
         
-        /* Hero Section */
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            z-index: 1001;
+            margin-top: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        /* CLAVE - Mostrar dropdown al hacer hover */
+        .language-selector:hover .language-dropdown {
+            display: block;
+        }
+        
+        .language-option {
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: var(--color-texto);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .language-option:last-child {
+            border-bottom: none;
+        }
+        
+        .language-option:hover {
+            background: #f8f9fa;
+            transform: translateX(5px);
+        }
+        
+        .language-option i {
+            margin-right: 12px;
+            font-size: 1.3rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* HERO SECTION */
         .hero {
-            padding: 150px 0 100px;
+            padding: 180px 0 120px;
             text-align: center;
             color: var(--color-blanco);
             margin-bottom: 60px;
-            border-radius: 0 0 20px 20px;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(42, 77, 52, 0.8) 0%, rgba(84, 122, 90, 0.8) 100%), 
-                        url('https://cdn.mos.cms.futurecdn.net/Nk4TdwHqFDKXZQwkvaiyEC-1920-80.jpg.webp');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
+            background: linear-gradient(135deg, rgba(42, 77, 52, 0.85) 0%, rgba(84, 122, 90, 0.75) 100%), url('https://cdn.mos.cms.futurecdn.net/Nk4TdwHqFDKXZQwkvaiyEC-1920-80.jpg.webp') center/cover no-repeat;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
-            animation: fadeIn 1s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             max-width: 700px;
             margin: 0 auto 30px;
-            opacity: 0.9;
-            animation: fadeIn 1.5s ease;
+            opacity: 0.95;
         }
         
-        /* Botones */
+        /* BOTONES */
         .btn {
             display: inline-block;
             background: var(--color-tierra);
@@ -162,7 +254,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
             font-size: 1.1rem;
@@ -172,16 +264,30 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: var(--color-verde-medio);
         }
         
         .btn-secondary {
             background: transparent;
             border: 2px solid var(--color-blanco);
         }
+
+        .btn-secondary:hover {
+            background: var(--color-blanco);
+            color: var(--color-verde-oscuro);
+        }
+
+        .btn-participate {
+            background: var(--color-verde-medio);
+            font-size: 1.1rem;
+            padding: 14px 30px;
+            margin-top: 15px;
+        }
         
-        /* Secciones generales */
+        /* SECCIONES */
         section {
             padding: 80px 0;
+            scroll-margin-top: 100px;
         }
         
         .section-title {
@@ -202,7 +308,7 @@
             border-radius: 2px;
         }
         
-        /* Proyecto Feralis */
+        /* PROYECTO FERALIS */
         .proyecto-feralis {
             background-color: var(--color-arena);
             border-radius: 20px;
@@ -211,7 +317,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        /* Sobre David */
+        /* SOBRE DAVID */
         .sobre-david {
             display: flex;
             align-items: center;
@@ -225,9 +331,7 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            padding: 15px;
-            border: 2px solid rgba(255,255,255,0.1);
+            background: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -238,14 +342,13 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            border-radius: 10px;
         }
         
         .sobre-content {
             flex: 1;
         }
         
-        /* Libros */
+        /* LIBROS */
         .libros-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -254,10 +357,10 @@
         
         .libro-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
         
         .libro-card:hover {
@@ -270,44 +373,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f5f5f5;
+            background: #f5f5f5;
+            padding: 20px;
         }
-
+        
         .libro-img img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .libro-card:hover .libro-img img {
-            transform: scale(1.05);
         }
         
         .libro-content {
-            padding: 20px;
-        }
-        
-        .libro-content h3 {
-            margin-bottom: 10px;
-            color: var(--color-verde-oscuro);
+            padding: 25px;
         }
         
         .banderas {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         
         .bandera {
             display: inline-block;
-            padding: 3px 8px;
+            padding: 4px 10px;
             background: var(--color-verde-medio);
             color: white;
-            border-radius: 3px;
+            border-radius: 5px;
             font-size: 0.8rem;
-            margin-right: 5px;
+            margin-right: 8px;
+            margin-bottom: 5px;
         }
         
-        /* Servicios */
+        /* SERVICIOS */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -317,14 +412,14 @@
         .servicio-card {
             text-align: center;
             padding: 40px 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
         }
         
         .servicio-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
         
         .servicio-icon {
@@ -333,18 +428,18 @@
             color: var(--color-tierra);
         }
         
-        /* Plataformas */
+        /* PLATAFORMAS */
         .plataformas {
-            background-color: var(--color-verde-medio);
+            background: var(--color-verde-medio);
             color: white;
             border-radius: 20px;
-            padding: 60px 0;
+            padding: 80px 0;
         }
         
         .plataformas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
             margin-top: 40px;
         }
         
@@ -352,12 +447,13 @@
             text-align: center;
             padding: 30px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s;
+            border-radius: 15px;
+            transition: all 0.3s ease;
         }
         
         .plataforma-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.18);
         }
         
         .plataforma-icon {
@@ -365,30 +461,33 @@
             margin-bottom: 15px;
         }
         
-        /* Footer */
+        /* FOOTER */
         footer {
             padding: 60px 0 30px;
             background: var(--color-verde-oscuro);
             color: white;
             text-align: center;
-            border-radius: 20px 20px 0 0;
         }
         
         .social-links {
             margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
         
         .social-links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 50px;
             height: 50px;
-            line-height: 50px;
             background: rgba(255, 255, 255, 0.1);
             color: white;
             font-size: 1.5rem;
-            margin: 0 10px;
             border-radius: 50%;
-            transition: background 0.3s, transform 0.3s;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
         
         .social-links a:hover {
@@ -396,23 +495,14 @@
             transform: translateY(-5px);
         }
         
-        /* Animaciones */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
             .nav-links {
                 display: none;
             }
             
-            .language-selector {
-                margin-left: 0;
-                margin-top: 15px;
-                justify-content: center;
-                width: 100%;
+            .hero {
+                padding: 150px 0 80px;
             }
             
             .hero h1 {
@@ -423,105 +513,173 @@
                 font-size: 1.2rem;
             }
             
-            .btn {
-                display: block;
-                margin: 10px auto;
-                width: 80%;
+            .language-selector {
+                margin-left: auto;
             }
-            
-            .btn-secondary {
-                margin-left: 0;
-            }
-            
-            .proyecto-feralis {
-                padding: 30px;
-            }
-            
+        }
+        
+        @media (max-width: 768px) {
             .sobre-david {
                 flex-direction: column;
+                gap: 30px;
             }
             
             .sobre-img {
                 width: 100%;
                 min-height: 300px;
             }
+            
+            .proyecto-feralis {
+                padding: 40px 30px;
+            }
+            
+            .libros-grid,
+            .servicios-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .language-dropdown {
+                right: auto;
+                left: 0;
+                min-width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .proyecto-feralis {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .logo i {
+                font-size: 1.5em;
+                margin-right: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-horse-head"></i> Proyecto Feralis</a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-horse-head"></i> 
+                    <span>Proyecto Feralis</span>
+                </a>
+                
                 <ul class="nav-links">
-                    <li><a href="#proyecto">Proyecto</a></li>
+                    <li><a href="proyecto.html">Proyecto</a></li>
                     <li><a href="#libros">Libros</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#sobre">Bio</a></li>
+                    <li><a href="participa.html">Participar</a></li>
                     <li><a href="#plataformas">Conectemos</a></li>
                 </ul>
-<div class="language-selector">
-    <a href="index.html">ES</a>
-    <a href="en.html">EN</a>
-    <a href="pt.html">PT</a>
-</div>
+                
+                <div class="language-selector">
+                    <button class="language-button">
+                        <i class="fas fa-globe"></i> 
+                        <span>ES</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="index.html" class="language-option">
+                            <span>🇪🇸</span> Español
+                        </a>
+                        <a href="en.html" class="language-option">
+                            <span>🇺🇸</span> English
+                        </a>
+                        <a href="pt.html" class="language-option">
+                            <span>🇵🇹</span> Português
+                        </a>
+                        <a href="da.html" class="language-option">
+                            <span>🇩🇰</span> Dansk
+                        </a>
+                        <a href="fr.html" class="language-option">
+                            <span>🇫🇷</span> Français
+                        </a>
+                        <a href="it.html" class="language-option">
+                            <span>🇮🇹</span> Italiano
+                        </a>
+                        <a href="ch.html" class="language-option">
+                            <span>🇨🇳</span> 中文
+                        </a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
             <h1>Comunicación y Conexión Equina</h1>
             <p>Descubre el lenguaje silencioso de los caballos y transforma tu relación con estos magníficos seres</p>
             <div>
-                <a href="#servicios" class="btn">Explora mis servicios</a>
-                <a href="#libros" class="btn btn-secondary">Descubre mis libros</a>
-                <a href="proyecto.html" target="_blank" class="btn btn-secondary">Nuestro Proyecto</a>
+                <a href="proyecto.html" class="btn">Conocer Proyecto Feralis</a>
+                <a href="#servicios" class="btn btn-secondary">Explorar servicios</a>
+                <a href="participa.html" class="btn btn-secondary">Participar</a>
             </div>
         </div>
     </section>
 
-    <!-- Proyecto Feralis -->
+    <!-- PROYECTO FERALIS -->
     <section id="proyecto">
         <div class="container">
             <h2 class="section-title">Proyecto Feralis</h2>
             <div class="proyecto-feralis">
                 <h3>El corazón de mi trabajo</h3>
-                <p>El Proyecto Feralis nace de la necesidad de crear puentes de comunicación más profundos y auténticos entre humanos y caballos. A través de años de observación, estudio y convivencia con estos animales, he desarrollado metodologías que respetan la esencia y naturaleza del caballo.</p>
-                <p>Este proyecto se sustenta en tres pilares fundamentales: la educación mediante talleres y seminarios, la divulgación a través de publicaciones y contenido digital, y la creación de una comunidad de amantes de los caballos que comparten valores de respeto y comprensión mutua.</p>
+                <p>El <strong>Proyecto Feralis</strong> nace de la necesidad de crear puentes de comunicación más profundos y auténticos entre humanos y caballos. A través de años de observación, estudio y convivencia con estos animales, he desarrollado metodologías que respetan la esencia y naturaleza del caballo.</p>
+                
+                <p>Este proyecto se sustenta en <strong>tres pilares fundamentales</strong>: la educación mediante talleres y seminarios, la divulgación a través de publicaciones y contenido digital, y la creación de una comunidad de amantes de los caballos que comparten valores de respeto y comprensión mutua.</p>
+                
                 <p>Tu apoyo económico permite mantener y expandir este proyecto, llegando a más personas y caballos que pueden beneficiarse de estas enseñanzas.</p>
-                <a href="proyecto.html" target="_blank" class="btn">Conocer más sobre el proyecto</a>
+                
+                <a href="proyecto.html" class="btn btn-participate">Conocer más sobre el proyecto</a>
             </div>
         </div>
     </section>
 
-    <!-- Sobre David -->
+    <!-- SOBRE DAVID -->
     <section id="sobre">
         <div class="container">
             <h2 class="section-title">Sobre David Castro</h2>
             <div class="sobre-david">
                 <div class="sobre-img">
-                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/11/13/5fa44ef23be9e.jpeg" alt="David Castro con caballos">
+                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/11/13/5fa44ef23be9e.jpeg" 
+                         alt="David Castro trabajando con caballos">
                 </div>
                 <div class="sobre-content">
-                    <h3>Escritor e investigador.</h3>
-                    <p>De la Doma a la Liberación – Una Vida con los Caballos. Con más de dos décadas de trabajo al lado de los caballos, David Castro ha recorrido un camino de transformación profunda que lo llevó de ser un reconocido domador a un referente internacional en educación respetuosa y activismo por los derechos animales.</p>
+                    <h3>Escritor e investigador especializado en comunicación equina</h3>
+                    <p><strong>De la Doma a la Liberación – Una Vida con los Caballos.</strong> Con más de dos décadas de trabajo al lado de los caballos, David Castro ha recorrido un camino de transformación profunda que lo llevó de ser un reconocido domador a un referente internacional en educación respetuosa y activismo por los derechos animales.</p>
                     
                     <p>Su trayectoria comenzó hace más de 20 años, donde durante una década se destacó como domador, siendo conocido por su facilidad y rapidez para obtener resultados excepcionales con técnicas no violentas. Sin embargo, su búsqueda de una relación más auténtica lo llevó a trascender el concepto de "doma" para abrazar uno de "educación".</p>
                     
-                    <p>Este cambio de paradigma lo impulsó a fundar el Espacio con Caballos (2010) y, tras ser nombrado representante de la Nevzorov Haute Ecole en Argentina (2012), fundó la primera Escuela Argentina de Hipología (2013). Su influencia creció con la publicación de sus dos libros, "El silencio de los caballos" (2015) y "Y le susurré al caballo" (2018), y docenas de artículos que denuncian la explotación equina y promueven el respeto.</p>
-                    
-                    <p>Desde 2017, su trabajo se ha expandido más allá de los caballos con el "Proyecto Feralis", una iniciativa de investigación para la coexistencia entre humanos y todos los animales dependientes (vacas, cerdos, perros, gallinas, etc.), explorando la resalvajización y la vida en territorios compartidos con armonía.</p>
-                    
-                    <p>Durante más de doce años, David ha viajado de forma autogestionada por América y Europa, impartiendo charlas, talleres y apoyando santuarios. Su misión hoy es clara: educar para comprender, respetar y liberar, trabajando por un futuro donde la relación con los demás animales se base en el respeto y no en la explotación.</p>
+                    <p>Desde 2017, su trabajo se ha expandido más allá de los caballos con el "Proyecto Feralis", una iniciativa de investigación para la coexistencia entre humanos y todos los animales dependientes, explorando la resalvajización y la vida en territorios compartidos con armonía.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Libros -->
+    <!-- LIBROS -->
     <section id="libros">
         <div class="container">
             <h2 class="section-title">Libros</h2>
@@ -529,7 +687,8 @@
                 <!-- LIBRO 1 - EL SILENCIO DE LOS CABALLOS -->
                 <div class="libro-card">
                     <div class="libro-img">
-                        <img src="https://m.media-amazon.com/images/I/71ck9lIixFS.jpg" alt="Portada de El Silencio de los Caballos">
+                        <img src="https://m.media-amazon.com/images/I/71ck9lIixFS.jpg" 
+                             alt="Portada del libro El Silencio de los Caballos">
                     </div>
                     <div class="libro-content">
                         <h3>El Silencio de los Caballos</h3>
@@ -539,14 +698,17 @@
                             <span class="bandera">EN</span>
                             <span class="bandera">PT</span>
                         </div>
-                        <a href="https://www.amazon.com/-/es/El-Silencio-los-Caballos-edición/dp/B092PJ9FDF/" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
+                        <a href="https://www.amazon.com/-/es/El-Silencio-los-Caballos-edición/dp/B092PJ9FDF/" class="btn" target="_blank">
+                            <i class="fab fa-amazon"></i> Comprar en Amazon
+                        </a>
                     </div>
                 </div>
                 
                 <!-- LIBRO 2 - Y LE SUSURRÉ AL CABALLO -->
                 <div class="libro-card">
                     <div class="libro-img">
-                        <img src="https://m.media-amazon.com/images/I/71ZrStxogrL.jpg" alt="Portada de Y le susurré al caballo">
+                        <img src="https://m.media-amazon.com/images/I/71ZrStxogrL.jpg" 
+                             alt="Portada del libro Y le susurré al caballo">
                     </div>
                     <div class="libro-content">
                         <h3>Y le susurré al caballo</h3>
@@ -555,14 +717,16 @@
                             <span class="bandera">ES</span>
                             <span class="bandera">PT</span>
                         </div>
-                        <a href="https://www.amazon.com/y-susurre-al-caballo-Spanish/dp/1687702977/" class="btn" target="_blank"><i class="fab fa-amazon"></i> Comprar en Amazon</a>
+                        <a href="https://www.amazon.com/y-susurre-al-caballo-Spanish/dp/1687702977/" class="btn" target="_blank">
+                            <i class="fab fa-amazon"></i> Comprar en Amazon
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Servicios -->
+    <!-- SERVICIOS -->
     <section id="servicios">
         <div class="container">
             <h2 class="section-title">Servicios</h2>
@@ -597,7 +761,7 @@
         </div>
     </section>
 
-    <!-- Plataformas -->
+    <!-- PLATAFORMAS -->
     <section id="plataformas" class="plataformas">
         <div class="container">
             <h2 class="section-title">Conectemos</h2>
@@ -639,48 +803,47 @@
                     <p>Tutoriales y documentales gratuitos</p>
                     <a href="https://www.youtube.com/@DavidCastro-animalidad" class="btn" target="_blank">Suscribirse</a>
                 </div>
-                
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fas fa-link"></i>
-                    </div>
-                    <h3>Linktree</h3>
-                    <p>Acceso a todos mis enlaces</p>
-                    <a href="https://linktr.ee/feralis" class="btn" target="_blank">Visitar</a>
-                </div>
-                
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fas fa-blog"></i>
-                    </div>
-                    <h3>Blog</h3>
-                    <p>Artículos profundos sobre comunicación equina</p>
-                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Leer</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <h3>Proyecto Feralis - Comunicación Equina</h3>
             <p>Conectando humanos y caballos a través del respeto y la comprensión mutua</p>
             
             <div class="social-links">
-                <a href="https://www.instagram.com/mas_animalidad/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@DavidCastro-animalidad" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://web.facebook.com/DavidCastroconCaballos/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@davidcastro.feral" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.amazon.com/stores/author/B086QS9LBX/allbooks" target="_blank"><i class="fab fa-amazon"></i></a>
+                <a href="https://www.instagram.com/mas_animalidad/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@DavidCastro-animalidad" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/cw/aprendizajeliberado" target="_blank">
+                    <i class="fab fa-patreon"></i>
+                </a>
             </div>
             
             <p>Contacto: davidnhe@gmail.com</p>
-            <p>&copy; 2023 Proyecto Feralis. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Proyecto Feralis. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
