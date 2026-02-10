@@ -1,504 +1,498 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- METADATOS ESENCIALES PARA SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE -->
-    <meta name="google-site-verification" content="BtBCmnYp-P8ykVe9IdNeJQ3RsE8htrFE38HwoHofNK0" />
-    
-    <!-- TÍTULO OPTIMIZADO -->
-    <title>Proyecto Feralis - Comunicación Equina | David Castro | Libros y Talleres</title>
-    
-    <!-- DESCRIPCIÓN META - CRÍTICA PARA SEO -->
-    <meta name="description" content="David Castro: Especialista en comunicación equina y autor de 'El Silencio de los Caballos'. Talleres presenciales, seminarios online y metodologías respetuosas de conexión con caballos. Proyecto Feralis.">
-    
-    <!-- OPEN GRAPH PARA REDES SOCIALES -->
-    <meta property="og:title" content="Proyecto Feralis - Comunicación y Conexión Equina | David Castro">
-    <meta property="og:description" content="Descubre el lenguaje silencioso de los caballos. Talleres, libros y metodologías respetuosas de comunicación equina.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://proyectoferalis.org">
-    
-    <!-- SCHEMA MARKUP PARA BUSCADORES -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                "name": "David Castro",
-                "description": "Escritor, investigador y especialista en comunicación equina con más de 20 años de experiencia",
-                "url": "https://proyectoferalis.org",
-                "sameAs": [
-                    "https://www.instagram.com/mas_animalidad/",
-                    "https://www.youtube.com/@DavidCastro-animalidad",
-                    "https://www.amazon.com/stores/author/B086QS9LBX"
-                ]
-            },
-            {
-                "@type": "Book",
-                "name": "El Silencio de los Caballos",
-                "author": {"@type": "Person", "name": "David Castro"},
-                "inLanguage": ["es", "en", "pt"]
-            },
-            {
-                "@type": "Book", 
-                "name": "Y le susurré al caballo",
-                "author": {"@type": "Person", "name": "David Castro"},
-                "inLanguage": ["es", "pt"]
-            },
-            {
-                "@type": "WebSite",
-                "name": "Proyecto Feralis",
-                "url": "https://proyectoferalis.org",
-                "description": "Comunicación y conexión equina - Talleres, libros y metodologías respetuosas"
-            }
-        ]
-    }
-    </script>
-    
-    <!-- CSS -->
+    <title>Arqueria Asiática Argentina Shop - Arquería Tradicional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-tierra: #8C6A4F;
-            --color-verde-oscuro: #2A4D34;
-            --color-verde-medio: #547A5A;
-            --color-arena: #D7C9AA;
-            --color-blanco: #F8F5F0;
-            --color-texto: #333333;
+            --primary-color: #8B0000;
+            --secondary-color: #DAA520;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f8f8;
+            --gray-color: #666;
+            --transition: all 0.3s ease;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-color);
             line-height: 1.6;
-            color: var(--color-texto);
-            background-color: var(--color-blanco);
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
-        /* HEADER */
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        /* Header */
         header {
-            background: var(--color-verde-oscuro);
-            color: var(--color-blanco);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: rgba(26, 26, 26, 0.95);
             position: fixed;
             width: 100%;
-            top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
-        nav {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--color-blanco);
-            text-decoration: none;
             display: flex;
             align-items: center;
         }
         
-        .logo i {
-            margin-right: 15px;
-            font-size: 1.8em;
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
         }
         
-        .nav-links {
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-menu {
             display: flex;
             list-style: none;
-            flex: 1;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1553545985-1e0d8781d5db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
         }
         
-        .nav-links li {
-            margin: 0 20px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--color-blanco);
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-        }
-        
-        .nav-links a:hover {
-            color: var(--color-arena);
-        }
-        
-        /* LANGUAGE SELECTOR - MEJORADO Y FUNCIONAL */
-        .language-selector {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .language-button {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-        
-        .language-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .language-button i {
-            margin-right: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .language-dropdown {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            background: white;
-            min-width: 180px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 12px;
-            overflow: hidden;
-            z-index: 1001;
-            margin-top: 8px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        /* CLAVE - Mostrar dropdown al hacer hover */
-        .language-selector:hover .language-dropdown {
-            display: block;
-        }
-        
-        .language-option {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            color: var(--color-texto);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .language-option:last-child {
-            border-bottom: none;
-        }
-        
-        .language-option:hover {
-            background: #f8f9fa;
-            transform: translateX(5px);
-        }
-        
-        .language-option i {
-            margin-right: 12px;
-            font-size: 1.3rem;
-            width: 20px;
-            text-align: center;
-        }
-        
-        /* HERO SECTION */
-        .hero {
-            padding: 180px 0 120px;
-            text-align: center;
-            color: var(--color-blanco);
-            margin-bottom: 60px;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(42, 77, 52, 0.85) 0%, rgba(84, 122, 90, 0.75) 100%), url('https://cdn.mos.cms.futurecdn.net/Nk4TdwHqFDKXZQwkvaiyEC-1920-80.jpg.webp') center/cover no-repeat;
-        }
-        
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
         }
         
         .hero p {
             font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 2rem;
         }
         
-        /* BOTONES */
         .btn {
             display: inline-block;
-            background: var(--color-tierra);
+            background-color: var(--primary-color);
             color: white;
-            padding: 14px 30px;
-            border-radius: 50px;
+            padding: 12px 30px;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
-            font-size: 1.1rem;
-            margin: 5px;
+            font-size: 1rem;
         }
         
         .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            background: var(--color-verde-medio);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--color-blanco);
-        }
-
-        .btn-secondary:hover {
-            background: var(--color-blanco);
-            color: var(--color-verde-oscuro);
-        }
-
-        .btn-participate {
-            background: var(--color-verde-medio);
-            font-size: 1.1rem;
-            padding: 14px 30px;
-            margin-top: 15px;
+        /* Quienes Somos */
+        .quienes-somos {
+            background-color: var(--light-color);
         }
         
-        /* SECCIONES */
-        section {
-            padding: 80px 0;
-            scroll-margin-top: 100px;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            font-size: 2.5rem;
-            color: var(--color-verde-oscuro);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: var(--color-tierra);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        
-        /* PROYECTO FERALIS */
-        .proyecto-feralis {
-            background-color: var(--color-arena);
-            border-radius: 20px;
-            padding: 60px;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        /* SOBRE DAVID */
-        .sobre-david {
-            display: flex;
+        .quienes-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
             align-items: center;
-            gap: 40px;
-            margin: 60px 0;
         }
         
-        .sobre-img {
-            flex: 1;
-            min-height: 400px;
-            border-radius: 20px;
+        .quienes-text {
+            padding-right: 20px;
+        }
+        
+        .quienes-image {
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .sobre-img img {
+        .quienes-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .quienes-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Que Hacemos */
+        .que-hacemos .container {
+            max-width: 1000px;
+        }
+        
+        .actividades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .actividad-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .actividad-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .actividad-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .actividad-card h3 {
+            color: var(--primary-color);
+        }
+        
+        /* Productos */
+        .productos {
+            background-color: var(--light-color);
+        }
+        
+        .productos-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .producto-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+        
+        .producto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .producto-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .producto-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            transition: var(--transition);
         }
         
-        .sobre-content {
-            flex: 1;
+        .producto-card:hover .producto-img img {
+            transform: scale(1.1);
         }
         
-        /* LIBROS */
-        .libros-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .libro-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .libro-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .libro-img {
-            height: 300px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f5f5f5;
+        .producto-info {
             padding: 20px;
         }
         
-        .libro-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .libro-content {
-            padding: 25px;
-        }
-        
-        .banderas {
-            margin: 15px 0;
-        }
-        
-        .bandera {
+        .producto-category {
             display: inline-block;
+            background-color: #f0f0f0;
+            color: var(--gray-color);
+            font-size: 0.85rem;
             padding: 4px 10px;
-            background: var(--color-verde-medio);
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .producto-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .producto-price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
             color: white;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-            margin-bottom: 5px;
+            padding: 60px 0 30px;
         }
         
-        /* SERVICIOS */
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .servicio-card {
-            text-align: center;
-            padding: 40px 30px;
-            border-radius: 15px;
-            background: white;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .servicio-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .servicio-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--color-tierra);
-        }
-        
-        /* PLATAFORMAS */
-        .plataformas {
-            background: var(--color-verde-medio);
-            color: white;
-            border-radius: 20px;
-            padding: 80px 0;
-        }
-        
-        .plataformas-grid {
+        .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
-        .plataforma-card {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .plataforma-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.18);
-        }
-        
-        .plataforma-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        /* FOOTER */
-        footer {
-            padding: 60px 0 30px;
-            background: var(--color-verde-oscuro);
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
             color: white;
-            text-align: center;
-        }
-        
-        .social-links {
-            margin: 30px 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            display: block;
             text-decoration: none;
         }
         
-        .social-links a:hover {
-            background: var(--color-tierra);
-            transform: translateY(-5px);
+        .footer-logo span {
+            color: var(--secondary-color);
         }
         
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .nav-links {
-                display: none;
+        .footer-about p {
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            color: #aaa;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .quienes-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .quienes-text {
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--dark-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
             }
             
             .hero {
@@ -506,343 +500,349 @@
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             
-            .language-selector {
-                margin-left: auto;
+            .section-padding {
+                padding: 60px 0;
             }
         }
         
-        @media (max-width: 768px) {
-            .sobre-david {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .sobre-img {
-                width: 100%;
-                min-height: 300px;
-            }
-            
-            .proyecto-feralis {
-                padding: 40px 30px;
-            }
-            
-            .libros-grid,
-            .servicios-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                max-width: 300px;
-                margin: 10px auto;
-            }
-            
-            .language-dropdown {
-                right: auto;
-                left: 0;
-                min-width: 200px;
-            }
-        }
-        
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
             .hero h1 {
                 font-size: 2rem;
             }
             
-            .section-title {
-                font-size: 2rem;
+            h1 {
+                font-size: 1.8rem;
             }
             
-            .proyecto-feralis {
-                padding: 30px 20px;
-            }
-            
-            .logo {
+            h2 {
                 font-size: 1.5rem;
             }
             
-            .logo i {
-                font-size: 1.5em;
-                margin-right: 10px;
+            .actividades-grid, .productos-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#" class="logo-text">Arquería<span>Asiática</span></a>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
             <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-horse-head"></i> 
-                    <span>Proyecto Feralis</span>
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="proyecto.html">Proyecto</a></li>
-                    <li><a href="#libros">Libros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre">Bio</a></li>
-                    <li><a href="participa.html">Participar</a></li>
-                    <li><a href="#plataformas">Conectemos</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#quienes-somos">Quienes Somos</a></li>
+                    <li><a href="#que-hacemos">Que Hacemos</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                
-                <div class="language-selector">
-                    <button class="language-button">
-                        <i class="fas fa-globe"></i> 
-                        <span>ES</span>
-                    </button>
-                    <div class="language-dropdown">
-                        <a href="index.html" class="language-option">
-                            <span>🇪🇸</span> Español
-                        </a>
-                        <a href="en.html" class="language-option">
-                            <span>🇺🇸</span> English
-                        </a>
-                        <a href="pt.html" class="language-option">
-                            <span>🇵🇹</span> Português
-                        </a>
-                        <a href="da.html" class="language-option">
-                            <span>🇩🇰</span> Dansk
-                        </a>
-                        <a href="fr.html" class="language-option">
-                            <span>🇫🇷</span> Français
-                        </a>
-                        <a href="it.html" class="language-option">
-                            <span>🇮🇹</span> Italiano
-                        </a>
-                        <a href="ch.html" class="language-option">
-                            <span>🇨🇳</span> 中文
-                        </a>
-                    </div>
-                </div>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
         <div class="container">
-            <h1>Comunicación y Conexión Equina</h1>
-            <p>Descubre el lenguaje silencioso de los caballos y transforma tu relación con estos magníficos seres</p>
-            <div>
-                <a href="proyecto.html" class="btn">Conocer Proyecto Feralis</a>
-                <a href="#servicios" class="btn btn-secondary">Explorar servicios</a>
-                <a href="participa.html" class="btn btn-secondary">Participar</a>
-            </div>
+            <h1>Arquería Asiática Argentina Shop</h1>
+            <p>Especialistas en arquería tradicional asiática. Ofrecemos arcos de fibra de vidrio, laminados, flechas y accesorios de la más alta calidad para arqueros de todos los niveles.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
         </div>
     </section>
 
-    <!-- PROYECTO FERALIS -->
-    <section id="proyecto">
+    <!-- Quienes Somos -->
+    <section class="quienes-somos section-padding" id="quienes-somos">
         <div class="container">
-            <h2 class="section-title">Proyecto Feralis</h2>
-            <div class="proyecto-feralis">
-                <h3>El corazón de mi trabajo</h3>
-                <p>El <strong>Proyecto Feralis</strong> nace de la necesidad de crear puentes de comunicación más profundos y auténticos entre humanos y caballos. A través de años de observación, estudio y convivencia con estos animales, he desarrollado metodologías que respetan la esencia y naturaleza del caballo.</p>
-                
-                <p>Este proyecto se sustenta en <strong>tres pilares fundamentales</strong>: la educación mediante talleres y seminarios, la divulgación a través de publicaciones y contenido digital, y la creación de una comunidad de amantes de los caballos que comparten valores de respeto y comprensión mutua.</p>
-                
-                <p>Tu apoyo económico permite mantener y expandir este proyecto, llegando a más personas y caballos que pueden beneficiarse de estas enseñanzas.</p>
-                
-                <a href="proyecto.html" class="btn btn-participate">Conocer más sobre el proyecto</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOBRE DAVID -->
-    <section id="sobre">
-        <div class="container">
-            <h2 class="section-title">Sobre David Castro</h2>
-            <div class="sobre-david">
-                <div class="sobre-img">
-                    <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2018/11/13/5fa44ef23be9e.jpeg" 
-                         alt="David Castro trabajando con caballos">
+            <h2>Quienes Somos</h2>
+            <div class="quienes-content">
+                <div class="quienes-text">
+                    <p>Somos <strong>Arquería Asiática Argentina Shop</strong>, una empresa apasionada por la arquería tradicional y su historia. Desde nuestro inicio, nos hemos dedicado a traer a Argentina los mejores productos de arquería asiática, fusionando técnicas ancestrales con materiales modernos.</p>
+                    <p>Nuestra misión es promover la práctica de la arquería tradicional en Argentina, ofreciendo equipamiento de calidad y asesoramiento especializado para arqueros de todos los niveles, desde principiantes hasta expertos.</p>
+                    <p>Contamos con un equipo de expertos en arquería tradicional que conocen profundamente cada producto que ofrecemos, asegurando que nuestros clientes reciban no solo los mejores productos, sino también la mejor orientación para su práctica.</p>
+                    <a href="#contacto" class="btn">Contáctanos</a>
                 </div>
-                <div class="sobre-content">
-                    <h3>Escritor e investigador especializado en comunicación equina</h3>
-                    <p><strong>De la Doma a la Liberación – Una Vida con los Caballos.</strong> Con más de dos décadas de trabajo al lado de los caballos, David Castro ha recorrido un camino de transformación profunda que lo llevó de ser un reconocido domador a un referente internacional en educación respetuosa y activismo por los derechos animales.</p>
-                    
-                    <p>Su trayectoria comenzó hace más de 20 años, donde durante una década se destacó como domador, siendo conocido por su facilidad y rapidez para obtener resultados excepcionales con técnicas no violentas. Sin embargo, su búsqueda de una relación más auténtica lo llevó a trascender el concepto de "doma" para abrazar uno de "educación".</p>
-                    
-                    <p>Desde 2017, su trabajo se ha expandido más allá de los caballos con el "Proyecto Feralis", una iniciativa de investigación para la coexistencia entre humanos y todos los animales dependientes, explorando la resalvajización y la vida en territorios compartidos con armonía.</p>
+                <div class="quienes-image">
+                    <img src="https://images.unsplash.com/photo-1583585635793-0e94d8b3e0cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arquería tradicional asiática">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LIBROS -->
-    <section id="libros">
+    <!-- Que Hacemos -->
+    <section class="que-hacemos section-padding" id="que-hacemos">
         <div class="container">
-            <h2 class="section-title">Libros</h2>
-            <div class="libros-grid">
-                <!-- LIBRO 1 - EL SILENCIO DE LOS CABALLOS -->
-                <div class="libro-card">
-                    <div class="libro-img">
-                        <img src="https://m.media-amazon.com/images/I/71ck9lIixFS.jpg" 
-                             alt="Portada del libro El Silencio de los Caballos">
+            <h2>Que Hacemos</h2>
+            <div class="actividades-grid">
+                <div class="actividad-card">
+                    <div class="actividad-icon">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <div class="libro-content">
-                        <h3>El Silencio de los Caballos</h3>
-                        <p>Una exploración profunda de la comunicación no verbal entre humanos y caballos.</p>
-                        <div class="banderas">
-                            <span class="bandera">ES</span>
-                            <span class="bandera">EN</span>
-                            <span class="bandera">PT</span>
-                        </div>
-                        <a href="https://www.amazon.com/-/es/El-Silencio-los-Caballos-edición/dp/B092PJ9FDF/" class="btn" target="_blank">
-                            <i class="fab fa-amazon"></i> Comprar en Amazon
-                        </a>
-                    </div>
+                    <h3>Venta de Equipamiento</h3>
+                    <p>Ofrecemos una amplia gama de productos de arquería asiática: arcos de fibra de vidrio, arcos laminados, flechas tradicionales y accesorios especializados.</p>
                 </div>
                 
-                <!-- LIBRO 2 - Y LE SUSURRÉ AL CABALLO -->
-                <div class="libro-card">
-                    <div class="libro-img">
-                        <img src="https://m.media-amazon.com/images/I/71ZrStxogrL.jpg" 
-                             alt="Portada del libro Y le susurré al caballo">
+                <div class="actividad-card">
+                    <div class="actividad-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="libro-content">
-                        <h3>Y le susurré al caballo</h3>
-                        <p>Relatos y experiencias personalizadas que revelan los secretos de la conexión equina.</p>
-                        <div class="banderas">
-                            <span class="bandera">ES</span>
-                            <span class="bandera">PT</span>
-                        </div>
-                        <a href="https://www.amazon.com/y-susurre-al-caballo-Spanish/dp/1687702977/" class="btn" target="_blank">
-                            <i class="fab fa-amazon"></i> Comprar en Amazon
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios">
-        <div class="container">
-            <h2 class="section-title">Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Talleres Presenciales</h3>
-                    <p>Experiencias prácticas donde aprenderás a comunicarte con caballos en un entorno natural y seguro.</p>
-                    <a href="https://linktr.ee/Feralis" class="btn" target="_blank">Más información</a>
+                    <h3>Asesoramiento Técnico</h3>
+                    <p>Brindamos asesoramiento especializado para ayudarte a elegir el equipo adecuado según tu nivel de experiencia y objetivos en la práctica de la arquería.</p>
                 </div>
                 
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Seminarios Online</h3>
-                    <p>Formación especializada desde cualquier lugar del mundo con contenido exclusivo y seguimiento personalizado.</p>
-                    <a href="https://campus.aprendizajelibre.com.ar" class="btn" target="_blank">Próximos eventos</a>
-                </div>
-                
-                <div class="servicio-card">
-                    <div class="servicio-icon">
+                <div class="actividad-card">
+                    <div class="actividad-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Asesoramiento Personalizado</h3>
-                    <p>Sesiones individuales para resolver problemas específicos con tu caballo o profundizar en aspectos concretos.</p>
-                    <a href="https://campus.aprendizajelibre.com.ar" class="btn" target="_blank">Solicitar asesoría</a>
+                    <h3>Talleres y Eventos</h3>
+                    <p>Organizamos talleres, demostraciones y eventos para promover la arquería tradicional y crear una comunidad de arqueros apasionados en Argentina.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PLATAFORMAS -->
-    <section id="plataformas" class="plataformas">
+    <!-- Productos -->
+    <section class="productos section-padding" id="productos">
         <div class="container">
-            <h2 class="section-title">Conectemos</h2>
-            <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;">Únete a la comunidad, sigue mi trabajo o apoya el proyecto</p>
+            <h2>Nuestros Productos</h2>
             
-            <div class="plataformas-grid">
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fab fa-patreon"></i>
+            <div class="productos-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="arcos-fibra">Arcos Fibra de Vidrio</button>
+                <button class="filter-btn" data-filter="arcos-laminados">Arcos Laminados</button>
+                <button class="filter-btn" data-filter="flechas">Flechas</button>
+                <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+            </div>
+            
+            <div class="productos-grid">
+                <!-- Arcos de Fibra de Vidrio -->
+                <div class="producto-card" data-category="arcos-fibra">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1534251369789-5067c8b8602a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arco de fibra de vidrio tradicional">
                     </div>
-                    <h3>Patreon</h3>
-                    <p>Apoyo mensual con recompensas exclusivas</p>
-                    <a href="https://www.patreon.com/cw/aprendizajeliberado" class="btn" target="_blank">Unirse</a>
+                    <div class="producto-info">
+                        <span class="producto-category">Arcos Fibra de Vidrio</span>
+                        <h3>Arco Mongol Fibra de Vidrio</h3>
+                        <p>Arco tradicional mongol fabricado en fibra de vidrio de alta resistencia. Ideal para principiantes y tiradores recreativos.</p>
+                        <p class="producto-price">$45.000</p>
+                    </div>
                 </div>
                 
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fas fa-mug-hot"></i>
+                <!-- Arcos Laminados -->
+                <div class="producto-card" data-category="arcos-laminados">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arco laminado coreano">
                     </div>
-                    <h3>Ko-fi</h3>
-                    <p>Contribuciones puntuales para el proyecto</p>
-                    <a href="https://ko-fi.com/proyectoferalis" class="btn" target="_blank">Contribuir</a>
+                    <div class="producto-info">
+                        <span class="producto-category">Arcos Laminados</span>
+                        <h3>Arco Coreano Laminado</h3>
+                        <p>Arco tradicional coreano fabricado con capas de madera, fibra de vidrio y resina epoxi. Excelente rendimiento y estética.</p>
+                        <p class="producto-price">$85.000</p>
+                    </div>
                 </div>
                 
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fab fa-instagram"></i>
+                <!-- Flechas -->
+                <div class="producto-card" data-category="flechas">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1545156521-77bd85671d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flechas tradicionales">
                     </div>
-                    <h3>Instagram</h3>
-                    <p>Contenido diario y behind the scenes</p>
-                    <a href="https://www.instagram.com/mas_animalidad" class="btn" target="_blank">Seguir</a>
+                    <div class="producto-info">
+                        <span class="producto-category">Flechas</span>
+                        <h3>Flechas Bambú con Punta Tradicional</h3>
+                        <p>Set de 12 flechas de bambú con puntas tradicionales y emplumado natural. Para arcos de hasta 50 lbs.</p>
+                        <p class="producto-price">$28.000</p>
+                    </div>
                 </div>
                 
-                <div class="plataforma-card">
-                    <div class="plataforma-icon">
-                        <i class="fab fa-youtube"></i>
+                <!-- Accesorios -->
+                <div class="producto-card" data-category="accesorios">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Protectores de mano y dedos">
                     </div>
-                    <h3>YouTube</h3>
-                    <p>Tutoriales y documentales gratuitos</p>
-                    <a href="https://www.youtube.com/@DavidCastro-animalidad" class="btn" target="_blank">Suscribirse</a>
+                    <div class="producto-info">
+                        <span class="producto-category">Accesorios</span>
+                        <h3>Protector de Mano y Dactilera</h3>
+                        <p>Set completo de protección: guarda mano en cuero y dactilera tradicional para arquería asiática.</p>
+                        <p class="producto-price">$12.500</p>
+                    </div>
+                </div>
+                
+                <!-- Arcos de Fibra de Vidrio 2 -->
+                <div class="producto-card" data-category="arcos-fibra">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1599159340657-4d2c3c49c1e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arco turco fibra de vidrio">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-category">Arcos Fibra de Vidrio</span>
+                        <h3>Arco Turco Fibra de Vidrio</h3>
+                        <p>Arco turco histórico fabricado en fibra de vidrio, con curvatura pronunciada y excelente potencia.</p>
+                        <p class="producto-price">$52.000</p>
+                    </div>
+                </div>
+                
+                <!-- Arcos Laminados 2 -->
+                <div class="producto-card" data-category="arcos-laminados">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1604079628042-b5b3c42fea5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arco japonés yumi">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-category">Arcos Laminados</span>
+                        <h3>Arco Japonés Yumi</h3>
+                        <p>Auténtico Yumi japonés laminado, fabricado siguiendo técnicas tradicionales. Para kyudo y práctica tradicional.</p>
+                        <p class="producto-price">$120.000</p>
+                    </div>
+                </div>
+                
+                <!-- Flechas 2 -->
+                <div class="producto-card" data-category="flechas">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1582167371270-68a4c52e45c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flechas de carbono">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-category">Flechas</span>
+                        <h3>Flechas Carbono con Punta Cónica</h3>
+                        <p>Flechas de carbono de alta calidad con puntas cónicas para mayor penetración. Disponible en distintas longitudes.</p>
+                        <p class="producto-price">$35.000</p>
+                    </div>
+                </div>
+                
+                <!-- Accesorios 2 -->
+                <div class="producto-card" data-category="accesorios">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1582167412228-4d0d5ca30d6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carcaj tradicional">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-category">Accesorios</span>
+                        <h3>Carcaj Tradicional de Cuero</h3>
+                        <p>Carcaj tradicional de cuero con capacidad para 12-15 flechas. Diseño histórico funcional y decorativo.</p>
+                        <p class="producto-price">$18.000</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- Footer -->
+    <footer id="contacto">
         <div class="container">
-            <h3>Proyecto Feralis - Comunicación Equina</h3>
-            <p>Conectando humanos y caballos a través del respeto y la comprensión mutua</p>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/mas_animalidad/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@DavidCastro-animalidad" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.patreon.com/cw/aprendizajeliberado" target="_blank">
-                    <i class="fab fa-patreon"></i>
-                </a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Arquería<span>Asiática</span></a>
+                    <p>Especialistas en arquería tradicional asiática. Traemos a Argentina los mejores productos para la práctica de este arte milenario.</p>
+                    <div class="social-links">
+                        <a href="#" class="btn" style="margin-right: 10px; margin-bottom: 10px;"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="btn" style="margin-right: 10px; margin-bottom: 10px;"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes-somos">Quienes Somos</a></li>
+                        <li><a href="#que-hacemos">Que Hacemos</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+                    <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@arqueriasiatica.com.ar</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 10:00 - 18:00</p>
+                </div>
             </div>
             
-            <p>Contacto: davidnhe@gmail.com</p>
-            <p>&copy; 2024 Proyecto Feralis. Todos los derechos reservados.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Arquería Asiática Argentina Shop. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Menú móvil
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Filtro de productos
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.producto-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Agregar clase active al botón clickeado
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
                     });
                 }
             });
+        });
+        
+        // Cambiar estilo del header al hacer scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+            }
         });
     </script>
 </body>
